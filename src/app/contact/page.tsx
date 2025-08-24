@@ -3,10 +3,10 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, ChevronDown } from 'lucide-react'
-import emailjs from '@emailjs/browser'
+/*import emailjs from '@emailjs/browser'
 
 // Initialize EmailJS
-emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
+emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)*/
 
 const contactInfo = [
   {
@@ -142,40 +142,18 @@ export default function ContactPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!validateForm() || !formRef.current) return
-
-    setIsSubmitting(true)
-    
-    try {
-      // Send email via EmailJS
-      const result = await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current
-      )
-      
-      console.log('Email sent successfully:', result.text)
-      setIsSubmitted(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        message: '',
-        hearAbout: ''
-      })
-    } catch (error) {
-      console.error('EmailJS Error:', error)
-      alert('Sorry, there was an error sending your message. Please try again or email me directly at achyut@example.com')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  e.preventDefault()
+  
+  if (!validateForm()) return
+  
+  setIsSubmitting(true)
+  
+  // Temporarily show success without sending email
+  console.log('Contact form submitted:', formData)
+  alert(`Thank you ${formData.name}! I'll contact you at ${formData.email} within 2 hours about your project.`)
+  setIsSubmitted(true)
+  setIsSubmitting(false)
+}
 
   return (
     <main className="pt-20">
