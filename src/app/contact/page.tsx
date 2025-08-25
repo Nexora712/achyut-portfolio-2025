@@ -18,13 +18,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: '+91 XXXXX XXXXX', // Replace with your phone
-    subtitle: 'Available Mon-Fri, 9 AM - 6 PM IST'
+    details: '+91 9311432974', // Replace with your phone
+    subtitle: 'Available Mon-Fri, 9 AM - 11 PM IST'
   },
   {
     icon: MapPin,
     title: 'Location',
-    details: 'India',
+    details: 'New Delhi, India',
     subtitle: 'Working with clients globally'
   },
   {
@@ -529,7 +529,7 @@ export default function ContactPage() {
                       <p className="text-sm text-secondary">
                         🔒 Your information is secure and will never be shared<br/>
                         ⚡ I typically respond within 2 hours<br/>
-                        💬 Prefer WhatsApp? <span className="text-primary font-medium">+91 XXXXX XXXXX</span>
+                        💬 Prefer WhatsApp? <span className="text-primary font-medium">+91 9311432974</span>
                       </p>
                     </div>
                   </form>
