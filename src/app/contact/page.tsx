@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: 'achyut@example.com', // Replace with your email
+    details: 'achyutpandey1212@gmail.com', // Replace with your email
     subtitle: 'I respond within 2 hours'
   },
   {
