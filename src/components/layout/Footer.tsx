@@ -15,13 +15,13 @@ export default function Footer() {
               SaaS MVPs, and AI-powered solutions with design precision.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-white/80 hover:text-white transition-colors">
+              <Link href="https://github.com/Nexora712" className="text-white/80 hover:text-white transition-colors">
                 GitHub
               </Link>
-              <Link href="#" className="text-white/80 hover:text-white transition-colors">
+              <Link href="https://www.linkedin.com/in/achyut-pandey-122a87323/" className="text-white/80 hover:text-white transition-colors">
                 LinkedIn
               </Link>
-              <Link href="#" className="text-white/80 hover:text-white transition-colors">
+              <Link href="https://x.com/Achyut18214831" className="text-white/80 hover:text-white transition-colors">
                 Twitter
               </Link>
             </div>
