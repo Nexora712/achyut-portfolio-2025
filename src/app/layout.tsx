@@ -4,6 +4,7 @@ import './globals.css'
 import SmoothScroll from '@/components/animations/SmoothScroll'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
