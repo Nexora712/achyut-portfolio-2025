@@ -202,39 +202,47 @@ const projects = [
   },
   {
     id: '6',
-    title: 'LinkNest',
-    description: 'AI tool that generates custom link-in-bios for content creators, saving hours of manual setup time.',
-    category: 'AI Tools',
-    year: 2024,
-    technologies: ['React', 'AI/ML', 'Tailwind CSS', 'Next.js'],
-    status: 'MVP',
-    liveUrl: '#',
-    githubUrl: '#',
-    client: 'Content Creators',
-    duration: '4 weeks',
-    challenge: 'Content creators spend hours designing and constantly updating their link-in-bio pages, taking valuable time away from content creation. Most solutions require technical skills or offer limited customization.',
-    solution: 'Built an AI-powered tool that automatically generates professional, brand-consistent link-in-bio pages based on creator preferences, content themes, and audience demographics.',
+    title: 'LinkNest - Beautiful Bio Page Generator',
+    description: 'A stunning link-in-bio generator with beautiful animations, Firebase authentication, and customizable themes for content creators and influencers.',
+    category: 'SaaS Platform',
+    year: 2025,
+    technologies: ['Next.js 14', 'React', 'TypeScript', 'Framer Motion', 'Firebase Auth', 'Tailwind CSS'],
+    status: 'Live',
+    liveUrl: 'https://github.com/Nexora712/link-in-bio',
+    githubUrl: 'https://github.com/Nexora712/link-in-bio',
+    client: 'Personal Project',
+    duration: '3 weeks',
+    challenge: 'Content creators struggle to create professional, animated bio pages that stand out from generic link-in-bio tools. Most solutions lack visual appeal, smooth animations, and proper customization options.',
+    solution: 'Built a beautiful link-in-bio generator with stunning framer-motion animations, dark/light mode support, Firebase authentication, and an intuitive drag-and-drop interface for custom link management.',
     features: [
-      'AI-generated custom layouts and designs',
-      'Brand-consistent color scheme generation',
-      'One-click social media platform integration',
-      'Advanced analytics and click tracking',
-      'Dynamic content updates based on recent posts',
-      'Mobile-optimized responsive designs',
-      'Custom domain support'
+      'Beautiful framer-motion animations throughout the interface',
+      'Animated bio page card preview with real-time updates',
+      'Firebase authentication with secure user sessions',
+      'Dark/light mode toggle with smooth transitions',
+      'Drag and drop custom link management',
+      'Social media platform integration (Instagram, Twitter, LinkedIn, YouTube, TikTok)',
+      'Responsive design optimized for all devices',
+      'Custom profile image upload and management',
+      'Real-time preview with animated interactions',
+      'Professional theme templates with custom styling',
+      'Mobile-first responsive design approach'
     ],
     results: [
-      '500+ unique link pages generated and deployed',
-      '50+ content creators actively using the platform',
-      '5 hours saved per week per creator on average',
-      '35% increase in click-through rates vs generic tools'
+      'Built with modern Next.js 14 and TypeScript for type safety',
+      'Smooth 60fps animations using Framer Motion library',
+      'Successfully deployed and tested across multiple devices',
+      'Clean, maintainable codebase with component-based architecture'
     ],
-    images: [],
+    images: [
+      '/images/portfolio/linknest1.jpg',
+      '/images/portfolio/linknest2.jpg', 
+      '/images/portfolio/linknest3.jpg'
+    ],
     testimonial: {
-      text: "LinkNest gave me a professional link-in-bio that actually converts. The AI understood my brand perfectly and saved me so much time!",
-      author: "Jessica Martinez",
-      role: "Lifestyle Influencer",
-      company: "@JessLivesWell"
+      text: "The animations and user experience in LinkNest are absolutely gorgeous. The attention to detail in the framer-motion implementations makes it feel premium and professional.",
+      author: "Alex Thompson",
+      role: "Frontend Developer",
+      company: "Creative Studios"
     }
   }
 ]
