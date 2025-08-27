@@ -131,9 +131,9 @@ const projects = [
       'Clean, maintainable codebase with component-based architecture'
     ],
     images: [
-      '/images/portfolio/linknest1.jpg',
-      '/images/portfolio/linknest2.jpg', 
-      '/images/portfolio/linknest3.jpg'
+      '/images/portfolio/project1.jpg',
+      '/images/portfolio/project2.jpg', 
+      '/images/portfolio/project3.jpg'
     ],
     testimonial: {
       text: "The animations and user experience in LinkNest are absolutely gorgeous. The attention to detail in the framer-motion implementations makes it feel premium and professional.",
