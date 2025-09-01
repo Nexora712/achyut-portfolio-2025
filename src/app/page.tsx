@@ -5,12 +5,11 @@ import PortfolioGrid from '@/components/sections/PortfolioGrid'
 import Testimonials from '@/components/sections/Testimonials'
 import CTA from '@/components/sections/CTA'
 
-
 export default function Home() {
   return (
     <main>
-      <Hero />
       <LaunchSpecialBanner />
+      <Hero />
       <AboutMe />
       <PortfolioGrid />
       <Testimonials />

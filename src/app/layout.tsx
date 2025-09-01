@@ -13,19 +13,16 @@ export const metadata: Metadata = {
   description: 'Building modern web apps, SaaS MVPs, and AI-powered solutions with design precision and scalable code.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <body>
         <SmoothScroll>
           <Navbar />
           {children}
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   )

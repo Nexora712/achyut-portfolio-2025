@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,24 @@
   --secondary: #7B7B7B;
   --tertiary: #F8F8F8;
   --white: #FFFFFF;
+  
+  /* Enhanced color variables for better client components */
+  --foreground: #222222;
+  --background: #FFFFFF;
+  --muted: #F5F5F5;
+  --muted-foreground: #7B7B7B;
+  --card: #FFFFFF;
+  --card-foreground: #222222;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --primary-foreground: #FFFFFF;
+  --accent: #F8F8F8;
+  --accent-foreground: #222222;
+  --ring: #222222;
+  
+  /* Success colors */
+  --green-600: #16A34A;
+  --green-100: #DCFCE7;
 }
 
 * {
@@ -22,22 +41,24 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--primary);
+  background-color: var(--background);
+  color: var(--foreground);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @layer components {
+  /* Enhanced button styles */
   .btn-primary {
-    @apply bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200 hover:scale-105;
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply border border-primary text-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-200;
+    @apply border border-primary text-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200 shadow-sm hover:shadow-md;
   }
   
+  /* Layout utilities */
   .section-padding {
     @apply py-24 lg:py-32;
   }
@@ -45,22 +66,162 @@ body {
   .container-custom {
     @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
+  
+  /* Client card specific utilities */
+  .client-card {
+    @apply bg-card text-card-foreground rounded-xl border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .client-card-header {
+    @apply flex items-center gap-4 mb-6;
+  }
+  
+  .client-avatar {
+    @apply flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-xl;
+  }
+  
+  .client-section {
+    @apply mb-6;
+  }
+  
+  .client-section-title {
+    @apply font-semibold text-lg text-foreground mb-3;
+  }
+  
+  .service-list {
+    @apply text-foreground space-y-2;
+  }
+  
+  .service-item {
+    @apply flex items-center gap-3;
+  }
+  
+  .service-bullet {
+    @apply w-2 h-2 bg-primary rounded-full flex-shrink-0;
+  }
+  
+  .tech-tag {
+    @apply px-3 py-1.5 rounded-full text-sm font-medium bg-tertiary text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default;
+  }
+  
+  .project-details-box {
+    @apply p-6 bg-gradient-to-r from-tertiary to-white rounded-xl border border-primary/10;
+  }
+  
+  .project-value {
+    @apply font-bold text-2xl text-primary;
+  }
+  
+  .testimonial-box {
+    @apply p-4 bg-primary/5 border-l-4 border-primary rounded-r-lg;
+  }
+  
+  /* Gallery utilities */
+  .gallery-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+  }
+  
+  .gallery-item {
+    @apply aspect-video rounded-lg overflow-hidden border-2 border-primary/20 hover:border-primary transition-colors shadow-md hover:shadow-lg cursor-pointer;
+  }
+  
+  .gallery-image {
+    @apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-300;
+  }
+  
+  /* Text utilities */
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  /* Loading states */
+  .skeleton {
+    @apply bg-muted animate-pulse rounded;
+  }
+  
+  /* Focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
 }
-/* Add this to the end of your existing globals.css */
 
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-/* Pulse animation for progress bar */
+/* Custom animations */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Scrollbar customization */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--tertiary);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Custom scrollbar for ClientCard */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--tertiary);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Ensure consistent card heights */
+.client-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .client-cards-container {
+    grid-template-columns: 1fr;
+  }
 }
