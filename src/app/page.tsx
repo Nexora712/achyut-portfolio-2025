@@ -8,8 +8,8 @@ import CTA from '@/components/sections/CTA'
 export default function Home() {
   return (
     <main>
-      <LaunchSpecialBanner />
       <Hero />
+      <LaunchSpecialBanner />
       <AboutMe />
       <PortfolioGrid />
       <Testimonials />
